@@ -1,4 +1,9 @@
 import '../styles/main.scss';
 
-import './components/gecko-o-meter';
+import gecko from './components/gecko-o-meter';
+import gauge from './components/gauge';
 
+import data from './data/graph-data';
+
+var elem = document.getElementById('app');
+gecko(elem, gauge, data);

@@ -1,4 +1,4 @@
-/* eslint-env jasmine, browser */
+/* eslint-env jasmine */
 
 import gecko from './gecko-o-meter';
 import chart from './gauge';

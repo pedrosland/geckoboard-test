@@ -1,4 +1,4 @@
-/* eslint-env jasmine, browser */
+/* eslint-env jasmine */
 
 import chart from './gauge';
 import Bacon from 'baconjs';
