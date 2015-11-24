@@ -1,5 +1,16 @@
-export default function(domElem, data$) {
-  data$.onValue((data) => {
-    domElem.innerHTML = '<div class="gecko-o-meter--value">34</div>';
+import R from 'ramda';
+import currency from '../util/currency';
+
+/**
+ * Create a Gecko-O-Meter on the given DOM element with the given chart
+ * @param {HTMLElement}      domElem  DOM element
+ * @param {Function}         chart    Chart function
+ * @param {Bacon.Observable} data     Bacon observable
+ */
+export default function(domElem, chart, data) {
+  data = data.map(d => {
+    return R.assoc('prefix', currency.codeToSymbol(d.unit), d);
   });
+
+  chart(domElem, data);
 }
