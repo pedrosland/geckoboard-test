@@ -9,7 +9,11 @@ import currency from '../util/currency';
  */
 export default function(domElem, chart, data) {
   data = data.map(d => {
-    return R.assoc('prefix', currency.codeToSymbol(d.unit), d);
+    if (d.format === 'currency') {
+      return R.assoc('prefix', currency.codeToSymbol(d.unit), d);
+    }
+
+    return d;
   });
 
   chart(domElem, data);
