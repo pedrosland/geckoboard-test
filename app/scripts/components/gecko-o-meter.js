@@ -6,6 +6,7 @@ import currency from '../util/currency';
  * @param {HTMLElement}      domElem  DOM element
  * @param {Function}         chart    Chart function
  * @param {Bacon.Observable} data     Bacon observable
+ * @return {Function}                 Destroy component
  */
 export default function(domElem, chart, data) {
   data = data.map(d => {
@@ -16,5 +17,5 @@ export default function(domElem, chart, data) {
     return d;
   });
 
-  chart(domElem, data);
+  return chart(domElem, data);
 }
