@@ -17,6 +17,6 @@ describe('gecko-o-meter', () => {
 
     chart(div, Bacon.constant(data));
 
-    expect($('.gecko-o-meter--value', div).text()).toBe('£' + data.value);
+    expect($('.gecko-o-meter--value', div).text()).toBe(String(data.value));
   });
 });
