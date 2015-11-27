@@ -4,7 +4,7 @@
 
 You will need:
 
-* Node and npm (I used v0.12 and v2.11 respectively)
+* Node and npm (I used v0.12 and v2.11 respectively). Travis claims it also works on Node v4.2 and v5.1
 * Probably python and other build tools for node-sass
 * Modern browser with support for ES2015 Promise API and CSS Flex
 
