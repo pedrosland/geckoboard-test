@@ -30,15 +30,12 @@ module.exports = {
   //  root: [path.join(__dirname, 'bower_components')]
   //},
   plugins: [
-    //new webpack.ResolverPlugin(
-    //  new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-    //),
+    new webpack.ProvidePlugin({
+      // The syntax here is a little WTF
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    })
     //new ExtractTextPlugin('styles.css', {
     //  allChunks: true
-    //}),
-    //new webpack.ProvidePlugin({
-    //  /*===== yeoman provide plugin hook =====*/
-    //  m: 'mithril'
     //})
   ],
   module: {
