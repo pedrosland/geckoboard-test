@@ -11,6 +11,7 @@ import currency from '../util/currency';
 export default function(domElem, chart, data) {
   data = data.map(d => {
     if (d.format === 'currency') {
+      // it would be nice to format currency with decimal point or "k" or "m" if appropriate
       return R.assoc('prefix', currency.codeToSymbol(d.unit), d);
     }
 

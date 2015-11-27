@@ -1,6 +1,4 @@
-html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
+$chartColor: #333;
+
+@import 'basic';
+@import 'charts';
