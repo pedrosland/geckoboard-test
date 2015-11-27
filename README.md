@@ -1,4 +1,4 @@
-# Geckboard Test
+# Geckboard Test [![Build Status](https://travis-ci.org/pedrosland/geckoboard-test.svg?branch=master)](https://travis-ci.org/pedrosland/geckoboard-test)
 
 ## Running
 
